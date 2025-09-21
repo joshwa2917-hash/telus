@@ -15,29 +15,66 @@
  */
 
 /* app/assets/stylesheets/application.css (or .scss) */
+/* app/assets/stylesheets/application.css */
+
+/* Background */
 body {
     background: url("rogers-bg.webp") no-repeat center center fixed;
     background-size: cover;
 }
 
-
+/* Form inputs */
 .form_input {
-    width: 400px !important;
+    width: 100% !important;
+    max-width: 400px;
     height: 53px;
 }
 
+/* Buttons */
 button {
     background: #dc481a !important;
     border: none !important;
     height: 53px;
 }
 
+/* Checkbox */
 .form-check-input:checked {
     background-color: #dc481a !important;
     border: none;
 }
 
+/* Main container */
 .main_div {
     padding: 45px !important;
     border-right: 5px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    body {
+        background-size: cover;
+        background-attachment: scroll; /* prevent zoom issues on mobile */
+    }
+
+    .main_div {
+        padding: 20px !important;
+    }
+
+    .form_input {
+        height: 48px;
+    }
+
+    button {
+        height: 48px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
