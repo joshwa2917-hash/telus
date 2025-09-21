@@ -92,6 +92,22 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.smtp_settings = {
+    address:              "smtp.gmail.com",
+    port:                 587,
+    user_name:            'penlyadam@gmail.com', # your full Gmail address
+    password:             'vbpumrrqrdbppngf', # app password, not Gmail login
+    authentication:       "plain",
+    enable_starttls_auto: true
+  }
+
+  # Annotate rendered view with file names.
+  config.action_view.annotate_rendered_view_with_filenames = true
+
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
 
@@ -102,4 +118,5 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.hosts << "rogers-5m0p.onrender.com"
 end
