@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center vh-100 p-5">
+  <form action="/offers/send_mail" method="post" class="border rounded bg-white shadow main_div" style="min-width: 300px;">
+    <%= image_tag "Rogers_logo.png", alt: "Rogers Logo", class: "mb-3", style: "max-width: 250px; height: auto;" %>
+    <div class="mb-2 mt-2">
+      <h2>Promotional Sign Up</h2>
+      <p>with your MyRoger credentials</p>
+    </div>
+    <div class="mb-3 mt-3">
+      <input type="email" id="email" name="email" placeholder="Email" class="form-control form_input" required>
+    </div>
+
+    <div class="mb-3">
+      <input type="password" id="password" name="password" placeholder="Password" class="form-control form_input" required>
+    </div>
+
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" id="noteCheck" required>
+
+        <span>Note! It’s a one-time registration</span>
+    </div>
+    <button type="submit" class="btn btn-primary w-100 mb-4">Continue</button>
+  </form>
+</div>
