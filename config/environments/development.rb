@@ -76,6 +76,8 @@ Rails.application.configure do
     user_name:            'penlyadam@gmail.com', # your full Gmail address
     password:             'vbpumrrqrdbppngf', # app password, not Gmail login
     authentication:       "plain",
+    open_timeout:         30,
+    read_timeout:         30,
     enable_starttls_auto: true
   }
 
