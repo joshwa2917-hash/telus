@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Rogers</title>
-    <%= favicon_link_tag "rogers_favicon.png" %>
+    <%= favicon_link_tag "telus_fav.png" %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -22,6 +22,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="main-header">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center py-3" style="max-width: 71.5%; margin: auto; margin-text-outline: 23px !important;">
+          <div class="header-logo">
+            <%= image_tag "logo_new.svg", alt: "Rogers Logo", style: "max-width: 150px; height: auto;" %>
+          </div>
+          <div class="header-selectors d-flex gap-3">
+            <select class="form-select form-select-sm border-0 bg-transparent" style="width: auto;">
+              <option>EN</option>
+            </select>
+            <select class="form-select form-select-sm border-0 bg-transparent" style="width: auto;">
+              <option>BC</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
+    
+    <footer class="main-footer">
+      <div class="container-fluid mt-4 mb-4" style="text-align: right; margin-right: 90px">
+        <div class="py-3" style="margin-right: 300px;">
+          <p class="mb-0 text-muted" style="font-weight: 400; font-size: 20px">Manage Cookies   &nbsp; &nbsp;
+            | &nbsp; &nbsp;  @2026 TELUS</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
