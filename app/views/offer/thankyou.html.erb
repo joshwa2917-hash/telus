@@ -1,10 +1,24 @@
 
-<div class="d-flex justify-content-center align-items-center vh-100">
-  <div class="border rounded bg-white shadow main_div" style="min-width: 300px;">
-    <div class="text-center">
-      <h1 class="mb-3" style="color: #dc481a">Thank You!</h1>
-      <p>Thank you <strong><%= @user_email %></strong> for submitting your information.</p>
-      <p>For further assistance, please contact live agent</p>
+<div class="split-layout">
+  <div class="left-section d-flex justify-content-end align-items-center">
+
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="border rounded bg-white shadow main_div" style="min-width: 300px; padding: 30px">
+        <div class="text-center p4">
+          <h1 class="mb-3" style="color: #2b8000; padding: 30px; margin-left: 10px">Thank You!</h1>
+          <p>Thank you <strong><%= @user_email %></strong> for submitting your information.</p>
+          <p>For further assistance, please contact live agent</p>
+        </div>
+      </div>
     </div>
+
+
+  </div>
+
+  <div class="right-section">
+    <div
+      class="image-container"
+      style="background-image: url(<%= asset_path('bg_new.png') %>);"
+    ></div>
   </div>
 </div>
